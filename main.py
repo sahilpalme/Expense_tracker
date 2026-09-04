@@ -2,11 +2,12 @@ import pandas as pd
 
 main_list = []
 a = input("Enter the reason: ")
-b = int(input("Enter the prize: "))
+b = int(input("Enter the amount spent: "))
 c = (input("Enter the date: "))
 
-main_list.append([a,b,c])
-
+main_list.append({'Reason':a,'Amount':b,'Date':c})
+df = pd.DataFrame(main_list)
+print(df)
 #pandas part
 filename= 'user_database.xlsx'
 df_existing = pd.read_excel(filename)
