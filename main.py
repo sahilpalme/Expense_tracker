@@ -27,6 +27,10 @@ def total_expense():
     t = df['Amount'].sum()
     print(f'Total expense: {t}')
 
+def view_expense():
+    df = pd.read_excel('user_database.xlsx')
+    print(df)
 
-add_expense()
-total_expense()
+view_expense()
+# add_expense()
+# total_expense()
